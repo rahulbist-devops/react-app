@@ -8,7 +8,7 @@ inputs:
     default: Rahul
 outputs:
   time:
-    descriotion: "Time of greeting"
+    description: "Time of greeting"
 runs:
   using: 'node12'
   main: 'dist/index.js'
