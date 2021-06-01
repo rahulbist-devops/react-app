@@ -27,7 +27,7 @@ jobs:
       - name: Upload test artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: code-coverage # file name 
+          name: code-coverage # file name
           path: coverage
       - name: Build Project
         if: github.event_name == 'push'
@@ -36,7 +36,7 @@ jobs:
         if: github.event_name == 'push'
         uses: actions/upload-artifact@v1
         with:
-          name: build # file name 
+          name: build # file name
           path: build
       - run: npm install -g surge
       - name: Deploy to Staging
@@ -45,4 +45,3 @@ jobs:
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-      
